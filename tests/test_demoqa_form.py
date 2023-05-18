@@ -1,10 +1,7 @@
 import datetime
 import allure
-from selene import browser
-
 from demoqa_tests.pages.registration_page import RegistrationPage
 from demoqa_tests.data.users import User, UserHobby, UserGender
-from utils import attach
 
 
 @allure.title('Successful registration in demo QA')
@@ -25,7 +22,4 @@ def test_form_filling(browser_actions):
     with allure.step("Check registration results"):
         registration_page.should_have_registered(tested_user)
 
-    attach.add_html(browser)
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
-    attach.add_video(browser)
+
