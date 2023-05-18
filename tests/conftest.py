@@ -6,13 +6,21 @@ from selenium.webdriver.chrome.options import Options
 from utils import attach
 
 
+def pytest_addoption(parser):
+    parser.addoption(
+        '--browser_version',
+        default='100.0'
+    )
+
+
 @pytest.fixture(scope='session')
-def browser_actions():
+def browser_actions(request):
+    browser_version = request.config.getoption('--browser_version')
     options = Options()
 
     selenoid_capabilities = {
         "browserName": "chrome",
-        "browserVersion": "100.0",
+        "browserVersion": browser_version,
         "selenoid:options": {
             "enableVNC": True,
             "enableVideo": True
