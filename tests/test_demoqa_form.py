@@ -4,7 +4,8 @@ from demoqa_tests.pages.registration_page import RegistrationPage
 from demoqa_tests.data.users import User, UserHobby, UserGender
 
 
-def test_form_filling(browser_actions):
+#def test_form_filling(browser_actions):
+def test_form_filling():
     pass
     # registration_page = RegistrationPage()
     # tested_user = User(first_name='Ivan', last_name='Petrov', email='ivanpetrov@mail.ru', gender=UserGender.Male.name,
