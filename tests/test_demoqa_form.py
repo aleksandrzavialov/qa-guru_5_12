@@ -28,3 +28,4 @@ def test_form_filling(browser_actions):
     attach.add_html(browser)
     attach.add_screenshot(browser)
     attach.add_logs(browser)
+    attach.add_video(browser)
